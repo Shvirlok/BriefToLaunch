@@ -29,45 +29,41 @@ The platform ingests raw corporate marketing briefs and instantly converts them 
    The integrated *War Room* provides a live, context-aware negotiation environment powered by a stubborn Category Buyer AI. Marketing teams can stress-test their proposed strategy under high pressure before signing binding contracts.
 
 ---
-
-## 🏗️ Repository Directory & Detailed File Breakdown
-
-Below is the complete architectural breakdown of every directory and file in the repository.
+## 🏗️ Repository Directory & Architecture Tree
 
 ```text
 BriefToLaunch/
 ├── backend/                        # FastAPI Backend Application Engine
-│   ├── app/                        # Main Application Source Directory
-│   │   ├── api/                    # API Routing Layer
-│   │   │   └── router.py           # Endpoint mapping (/campaign/generate, /campaign/negotiate)
-│   │   ├── core/                   # Core App Configurations
-│   │   │   └── config.py           # Environment variables & OpenAI client initialization
-│   │   ├── prompts/                # AI Agent Instructions
-│   │   │   └── cmo_prompt.py       # Strict system prompt enforcing a cold, audit-driven tone
-│   │   ├── schemas/                # Pydantic Data Models (Data Transfer Objects)
-│   │   │   └── campaign.py         # Structured Outputs schema definition (CampaignResponse)
-│   │   ├── services/               # Business Logic & LLM Execution
-│   │   │   └── llm.py              # OpenAI API integration & dynamic mock fallback engine
-│   │   └── main.py                 # FastAPI application instance & CORS middleware setup
+│   ├── app/                        # Application Core Source Code
+│   │   ├── api/                    # API Route Handlers
+│   │   │   └── router.py           # API endpoints (/campaign/generate, /campaign/negotiate)
+│   │   ├── core/                   # Core App Configuration
+│   │   │   └── config.py           # Environment variables & OpenAI client config
+│   │   ├── prompts/                # AI Agent System Instructions
+│   │   │   └── cmo_prompt.py       # System prompt for audit-driven tone
+│   │   ├── schemas/                # Pydantic Data Models (Structured Outputs)
+│   │   │   └── campaign.py         # JSON schema rules (CampaignResponse, B2BPitch)
+│   │   ├── services/               # Core LLM Business Logic
+│   │   │   └── llm.py              # OpenAI API integration & mock fallback engine
+│   │   └── main.py                 # FastAPI instance & CORS middleware setup
 │   ├── tests/                      # Automated Test Suite
 │   │   ├── conftest.py             # Pytest fixtures and mock client setup
 │   │   └── test_campaign.py        # Unit tests for schemas and API endpoints
 │   ├── .env.example                # Template for required environment variables
-│   ├── requirements.txt            # Python dependencies (FastAPI, Pydantic, OpenAI, Pytest)
-│   ├── run.py                      # Local server entrypoint wrapper (Uvicorn launcher)
-│   └── app.py                      # Production deployment entrypoint
+│   ├── requirements.txt            # Backend Python dependencies
+│   └── run.py                      # Local server launcher wrapper (Uvicorn)
 │
 ├── frontend/                       # Next.js 14 Frontend User Interface
 │   ├── src/                        # React Application Source Code
 │   │   └── app/                    # Next.js App Router Structure
-│   │       ├── page.tsx            # Single-Screen High-Density B2B Dashboard UI
-│   │       ├── layout.tsx          # Root HTML layout & global metadata configuration
-│   │       └── globals.css         # Tailwind CSS imports & custom styling rules
+│   │       ├── page.tsx            # Single-Screen High-Density Terminal Dashboard
+│   │       ├── layout.tsx          # Root HTML layout & metadata setup
+│   │       └── globals.css         # Tailwind CSS imports & terminal dark-mode styles
 │   ├── package.json                # Frontend Node.js dependencies & scripts
-│   ├── tailwind.config.js          # Custom UI theme, colors, and layout grid setup
+│   ├── tailwind.config.js          # Custom theme, neon palette & grid tokens
 │   ├── tsconfig.json               # TypeScript compiler configuration
 │   ├── next.config.mjs             # Next.js framework build rules
-│   └── postcss.config.js           # PostCSS plugin settings for Tailwind compilation
+│   └── postcss.config.js           # PostCSS plugin settings for Tailwind
 │
-├── .gitignore                      # Git exclusion rules (build directories, .env, pycache)
-└── README.md                       # Comprehensive project documentation
+├── .gitignore                      # Git exclusion rules (builds, .env, cache)
+└── README.md                       # Complete project documentation
