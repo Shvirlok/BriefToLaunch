@@ -1,3 +1,6 @@
+<img width="1277" height="711" alt="Screenshot 2026-07-21 at 15 53 26" src="https://github.com/user-attachments/assets/cacfa962-ca4e-445b-9edb-9b04ae868c62" />
+
+
 # BriefToLaunch 🚀
 > **Elite Dynamic B2B Marketing Strategy & Financial Stress-Testing SaaS Platform**
 
