@@ -28,10 +28,6 @@ async def generate_campaign(
 
 @router.post("/export")
 async def export_pdf(campaign: CampaignResponse):
-    """
-    Accepts the compiled CampaignResponse and returns a professional, downloadable 
-    executive campaign brief in PDF format in-memory using reportlab, using USD currency.
-    """
     buffer = io.BytesIO()
     doc = SimpleDocTemplate(
         buffer, 
@@ -140,10 +136,7 @@ async def negotiate_campaign(
     payload: NegotiationRequest, 
     llm_service: LLMService = Depends()
 ):
-    """
-    Simulates a live B2B budget negotiation with a toxic Category Buyer.
-    Takes user counter-arguments, history, and brand profiles to generate replies, objections, and deal odds.
-    """
+
     try:
         response = await llm_service.negotiate_strategy(payload)
         return response
