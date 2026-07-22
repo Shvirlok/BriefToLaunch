@@ -1,36 +1,25 @@
-<img width="1277" height="711" alt="Screenshot 2026-07-21 at 15 53 26" src="https://github.com/user-attachments/assets/cacfa962-ca4e-445b-9edb-9b04ae868c62" />
-
-
 # BriefToLaunch 🚀
+
 > **Elite Dynamic B2B Marketing Strategy & Financial Stress-Testing SaaS Platform**
-
-BriefToLaunch is an autonomous, full-stack B2B SaaS platform engineered for ruthless business auditing and financial stress-testing of marketing strategies. 
-
-Most modern marketing briefs and agency proposals are saturated with subjective fluff, vanity metrics, vague commitments, and unrealistic ROI projections. **BriefToLaunch was built to strip away this inefficiency.**
-
-The platform ingests raw corporate marketing briefs and instantly converts them into a deterministic, cash-flow-resilient financial model. Instead of generating plain text, the core engine executes strict resource allocation calculations, detects hidden margin leaks, and prepares brand leadership for the harsh realities of B2B contract negotiations.
 
 ---
 
 ## 📌 Executive Summary & Core Value Proposition
 
+Most modern marketing briefs and agency proposals are saturated with subjective fluff, vanity metrics, vague commitments, and unrealistic ROI projections. **BriefToLaunch** is an autonomous, full-stack B2B SaaS platform engineered for ruthless business auditing and financial stress-testing of marketing strategies.
+
+The platform ingests raw corporate marketing briefs and instantly converts them into a deterministic, cash-flow-resilient financial model. Instead of generating plain text, the core engine executes strict resource allocation calculations, detects hidden margin leaks, and prepares brand leadership for the harsh realities of B2B contract negotiations.
+
 ### 🎯 Key Business Problems Solved:
 
-1. **The Illusion of Budget Efficiency:** 
-   Agencies frequently allocate campaign budgets based on guesswork or margin optimization for themselves rather than the client. BriefToLaunch calculates channel budget splits in **USD ($)** with exact mathematical precision, locking every percentage directly to executable activations.
-
-2. **Static & Unrealistic B2B Partner Pitches:** 
-   Instead of using rigid hardcoded templates, the platform's *Dynamic Partner Extraction* engine parses brief inputs in real time, isolates real commercial entities (retail networks, distributors, venue networks, CSR entities), and crafts dedicated, margin-driven commercial pitches for each.
-
-3. **Hidden Capital Losses (Margin Leaks):**
-   The *Burn Rate Simulator* analyzes capital dissipation risks caused by agency markups, logistical friction, and unoptimized B2B discounts, delivering an automated Risk Score and financial warning before capital is deployed.
-
-4. **Negotiation Unpreparedness:**
-   The integrated *War Room* provides a live, context-aware negotiation environment powered by a stubborn Category Buyer AI. Marketing teams can stress-test their proposed strategy under high pressure before signing binding contracts.
+* **The Illusion of Budget Efficiency:** Calculates channel budget splits in **USD ($)** with exact mathematical precision, locking every percentage directly to executable activations.
+* **Static & Unrealistic B2B Partner Pitches:** The *Dynamic Partner Extraction* engine parses brief inputs in real-time, isolates commercial entities (retail networks, distributors, venue networks, CSR entities), and crafts margin-driven commercial pitches for each.
+* **Hidden Capital Losses (Margin Leaks):** The *Burn Rate Simulator* analyzes capital dissipation risks caused by agency markups, logistical friction, and unoptimized B2B discounts, delivering an automated Risk Score and financial warning before capital is deployed.
+* **Negotiation Unpreparedness:** The integrated *War Room* provides a live, context-aware negotiation environment powered by a stubborn Category Buyer AI to stress-test proposed strategies before signing binding contracts.
 
 ---
-## 🏗️ Repository Directory & Architecture Tree
 
+## 🏗️ Repository Directory & Architecture Tree
 ```text
 BriefToLaunch/
 ├── backend/                        # FastAPI Backend Application Engine
@@ -67,3 +56,50 @@ BriefToLaunch/
 │
 ├── .gitignore                      # Git exclusion rules (builds, .env, cache)
 └── README.md                       # Complete project documentation
+```
+---
+
+## 🚀 Quick Start & Local Setup
+
+Follow these steps to get the entire full-stack application running locally in under 2 minutes.
+
+### Prerequisites
+* **Python 3.11+**
+* **Node.js 18+** & `npm`
+
+---
+
+### 1. Backend Setup (FastAPI)
+
+```bash
+# Navigate to backend directory
+cd backend
+
+# Create and activate virtual environment
+python -m venv venv
+
+# On macOS/Linux:
+source venv/bin/activate
+# On Windows:
+# venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Create .env file from example
+cp .env.example .env
+
+# Run the backend server
+python run.py
+
+# Navigate to frontend directory
+cd frontend
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+cd backend
+pytest
